@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="../Script/angular.js"></script>
+    <script src="../Script/FILTER BY MULTIPLE PROPERTIES.js"></script>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: brown;
+            border: 2px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+         <input type="text" placeholder="Search Name" ng-model="searchText.name" />
+        &nbsp;&nbsp;&nbsp;
+         <input type="text" placeholder="Search city" ng-model="searchText.city" />
+        &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" ng-model="extactMatch" /> Extact Match
+            <br /><br />
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Dob</th>
+                    <th>Gender</th>
+                    <th>salary</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ep in emp | filter:searchText:extactMatch">
+                    <td>{{ep.name }}</td>
+                    <td>{{ep.dateofbrith | date :dd/MM/yyyy}}</td>
+                    <td>{{ep.gender }}</td>
+                    <td>{{ep.city }}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

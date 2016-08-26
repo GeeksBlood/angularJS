@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="../Script/angular.js"></script>
+    <script src="../Script/SEARCH FILTER.js"></script>
+	<meta charset="utf-8" />
+    <style>
+        table
+        {
+            border-collapse:collapse;
+        }
+        th{
+            background-color:brown;
+            border:2px solid black;
+            padding:5px;
+            text-align:left;
+        }
+        td{
+            border:1px solid black;
+            padding:5px;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        Search Data :- <input type="text" placeholder="Search Employee" ng-model="searchText" />
+        <!--Search Data :- <input type="text" placeholder="Search Employee" ng-model="searchText.salary" />-->
+             <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Dob</th>
+                    <th>Gender</th>
+                    <th>salary</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ep in emp | filter:searchText">
+                    <td>{{ep.name }}</td> 
+                    <td>{{ep.dateofbrith | date :dd/MM/yyyy}}</td>
+                    <td>{{ep.gender }}</td>
+                    <td>{{ep.salary }}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

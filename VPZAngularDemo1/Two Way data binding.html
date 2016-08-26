@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Script/angular.js"></script>
+    <script src="Script/Two Way data binding.js"></script>
+   
+	<meta charset="utf-8" />
+</head>
+<body ng-app="myModule">
+   <h1>Two way data binding</h1>
+    <h2>Part 1</h2>
+     <div ng-controller="myController">
+        <input type="text" ng-model="message" />
+        <br /><br />
+        {{message}}
+        <hr />
+
+             <h3>Part 2</h3>
+             <input type="text" ng-model="getting" />
+             <br /><br />
+            <p> {{getting}}</p>
+             <hr />
+
+         <h4>part 3</h4>
+         <table border="1">
+            <tr>
+                 <td>FirstName:-</td>
+                 <td><input type="text" ng-model="emp.firstName" /></td>
+             </tr>
+             <tr>
+                 <td> LastName:- </td>
+                 <td>  <input type="text" ng-model="emp.lastName" />  </td>
+            </tr>
+             <tr>
+                 <td>  Gender  </td>
+                 <td> <input type="text" ng-model="emp.gender" /> </td>
+             </tr>
+         </table>
+
+         <table >
+             <tr>
+                 <td>FirstName:-</td>
+                 <td>{{emp.firstName}}</td>
+             </tr>
+             <tr>
+                 <td> LastName:- </td>
+                 <td> {{emp.lastName}}</td>
+             </tr>
+             <tr>
+                 <td>  Gender  </td>
+                 <td> {{emp.gender}}</td>
+             </tr>
+         </table>
+    </div>
+</body>
+</html>

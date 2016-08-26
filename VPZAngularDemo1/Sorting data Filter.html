@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorting  Filter in Angular JS</title>
+    <script src="Script/angular.js"></script>
+    <script src="Script/Sorting data filter.js"></script>
+	<meta charset="utf-8" />
+    <style>
+         body
+        {
+            font-family:Arial;
+        }
+        table{
+            border-collapse:collapse;
+        }
+        td{
+            border:1px solid black;
+            padding:5px;
+        }
+        th
+        {
+            background-color:saddlebrown;
+            font-weight:bold;
+            border:2px solid black;
+            padding:5px;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        Order By :- <select ng-model="sortColumn">
+                        <option value="name">Name ASC</option>
+                        <option value="gender">Gender ASC</option>
+                        <option value="dateofbrith">DateOfBrith ASC</option>
+                        <option value="-salary">Salary Des</option>
+        
+        </select>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Dob</th>
+                    <th>Gender</th>
+                    <th>salary</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <!--<tr ng-repeat="ep in emp | orderBy:'name'">-->
+                <!--<tr ng-repeat="ep in emp | orderBy:'name':false">-->
+                <!--<tr ng-repeat="ep in emp | orderBy:'name':true">-->
+                <!--<tr ng-repeat="ep in emp | orderBy:'+name'">-->
+                <!--<tr ng-repeat="ep in emp | orderBy:'-name'">-->
+                <tr ng-repeat="ep in emp | orderBy:sortColumn">
+                    <td>{{ep.name }}</td>
+                    <td>{{ep.dateofbrith |date:"dd/MM/yyyy" }}</td>
+                    <td>{{ep.gender }}</td>
+                    <td>{{ep.salary }}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

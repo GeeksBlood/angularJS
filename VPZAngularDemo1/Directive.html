@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Script/angular.js"></script>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="">
+    <h1>Sample Directive Application</h1>
+
+    <div ng-app="" ng-init="Infor = [{company:'Geeksblood',fullName:'Rahul Sharma' ,state:'Delhi'},
+          {company:'Geeksblood',fullName:'Rupesh Gupta' ,state:'Up'},
+          {company:'Geeksblood',fullName:'Maheep' ,state:'Panjab'}]">
+
+        <p>Enter your Name: <input type="text" ng-model="name"></p>
+        <p>Hello <span ng-bind="name"></span>!</p>
+        <p>List of Employee:</p>
+
+        <ol>
+            <li ng-repeat="x in Infor">
+                {{ 'FullName: ' + x.fullName + ', Company: ' + x.company + ', State:' + x.state}}
+            </li>
+        </ol>
+    </div>
+
+
+</body>
+</html>

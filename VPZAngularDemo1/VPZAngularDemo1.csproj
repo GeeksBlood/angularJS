@@ -22,15 +22,47 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Directive.html" />
+    <Content Include="Expression.html" />
+    <Content Include="Filters\Angular Js Filter.html" />
     <Content Include="app.css" />
     <Content Include="controller.html" />
+    <Content Include="Filters\CUSTOM FILTER.html" />
+    <Content Include="Filters\FILTER BY MULTIPLE PROPERTIES.html" />
+    <Content Include="FirstDemoApp.html" />
+    <Content Include="HtmlDom-Element.html" />
+    <Content Include="IncludesDirective\IncludeDirective.js" />
+    <Content Include="IncludesDirective\main.html" />
+    <Content Include="IncludesDirective\subjects.html" />
+    <Content Include="IncludesDirective\TryCombine.html" />
+    <Content Include="Module\Module.html" />
+    <Content Include="Module\Script\angular.js" />
+    <Content Include="Module\Script\ApplicationModule.js" />
+    <Content Include="Module\Script\ControllerModule.js" />
+    <Content Include="Script\NG-HIDE AND NG-SHOW.js" />
+    <Content Include="Handling events.html" />
     <Content Include="Image\JaiHo.jpg" />
-    <Content Include="index.html" />
+    <Content Include="NG-HIDE AND NG-SHOW.html" />
+    <Content Include="Ng-repeat.html" />
     <Content Include="ng-src directive.html" />
+    <Content Include="Script\Angular Js Filter.js" />
     <Content Include="Script\angular.js" />
     <Content Include="Script\angular.min.js" />
+    <Content Include="Script\CUSTOM FILTER.js" />
+    <Content Include="Script\FILTER BY MULTIPLE PROPERTIES.js" />
+    <Content Include="Script\Handling events.js" />
+    <Content Include="Script\Ng-repeat.js" />
     <Content Include="Script\ng-src-directive.js" />
-    <Content Include="Script\Script.js" />
+    <Content Include="Script\Controller.js" />
+    <Content Include="Script\SEARCH FILTER.js" />
+    <Content Include="Script\Sort Rows by Table Header.js" />
+    <Content Include="Script\Sorting data filter.js" />
+    <Content Include="Script\Two Way data binding.js" />
+    <Content Include="Filters\SEARCH FILTER .html" />
+    <Content Include="Filters\Sort Rows by Table Header.html" />
+    <Content Include="Filters\Sorting data Filter.html" />
+    <Content Include="Sorting data Filter.html" />
+    <Content Include="Two Way data binding.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Script/angular.js"></script>
+    <script src="Script/Ng-repeat.js"></script>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="myModule" style="font-family:Arial;">
+    <h1>Part 1:- ng-repeat example</h1>
+    <!--<div ng-controller="myController">
+        
+        <table >
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in emp">
+                    <td>{{employee.firstName}}</td>
+                    <td>{{employee.lastName}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>-->
+    <h2>Part 2:- Nested  ng-repeat example</h2>
+    <!--<div ng-controller="myCont">
+        <ul>
+            <li ng-repeat="country in countries">
+                {{country.name}}
+                <ul>
+                    <li ng-repeat="cities in country.city">
+                        {{cities.name}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>-->
+    <h2>Part 3 Find the Index Values</h2>
+   <div ng-controller="myCont">
+        <ul>
+            <li ng-repeat="country in countries">
+                {{country.name}} - index = {{$index}}
+                <ul>                                          
+                    <li ng-repeat="cities in country.city" >  <!--ng-init="parentIndex=$index"-->
+                        {{cities.name}} - Parent Index = {{$parent.$index}} , index = {{$index}}
+                        <!--{{cities.name}} - parent index = {{parentIndex}} , index = {{$index}}-->
+                         
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

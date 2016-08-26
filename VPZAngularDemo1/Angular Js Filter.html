@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Script/angular.js"></script>
+    <script src="Script/Angular Js Filter.js"></script>
+    <style>
+        body
+        {
+            font-family:Arial;
+        }
+        table{
+            border-collapse:collapse;
+        }
+        td{
+            border:1px solid black;
+            padding:5px;
+        }
+        th
+        {
+            background-color:saddlebrown;
+            font-weight:bold;
+            border:2px solid black;
+            padding:5px;
+        }
+    </style>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        Rows to diaplay :- <input type="number" step="1" max="5" min="0" ng-model="rowLimit" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Dob</th>
+                    <th>Gender</th>
+                    <th>salary (Number)</th>
+                    <th>salary (curreny)</th>
+                </tr>
+            </thead>
+            <tbody>
+             
+                <!--<tr ng-repeat="ep in emp">
+                    <td>{{ep.name }}</td>
+                    <td>{{ep.dateofbrith}}</td>
+                    <td>{{ep.gender }}</td>
+                    <td>{{ep.salary }}</td>
+                    <td>{{ep.salary }}</td>
+                </tr>-->
+              
+                <!--<tr ng-repeat="ep in emp | limitTo:3:2" >-->
+                <tr ng-repeat="ep in emp | limitTo:rowLimit">
+                    <td>{{ep.name | uppercase }}</td>
+                    <td>{{ep.dateofbrith |date:"dd/MM/yyyy" }}</td>
+                    <td>{{ep.gender | lowercase }}</td>
+                    <td>{{ep.salary | number:2 }}</td>
+                    <td>{{ep.salary |currency:"&":1 }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

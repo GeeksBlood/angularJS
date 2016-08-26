@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="../Script/angular.js"></script>
+    <script src="Script/NG-HIDE AND NG-SHOW.js"></script>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: brown;
+            border: 2px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <input type="checkbox" ng-model="hidesalary" />Hide Salary
+        <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <!--<th ng-hide="hidesalary">salary</th>-->
+                  <!--step:-2-->  <!--<th ng-Show="!hidesalary">salary</th>-->
+                    <!--step:-3--> <th ng-hide="hidesalary">salary</th>
+                    <!--step:-3--> <th ng-show="hidesalary">salary</th>
+                    <th>city</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ep in emp">
+                    <td>{{ep.name }}</td>
+                    <td>{{ep.gender}}</td>
+                    <!--<td ng-hide="hidesalary">{{ep.Salary }}</td>-->
+    <!--step:-2-->  <!--<td ng-show="!hidesalary">{{ep.Salary }}</td>-->
+    <!--step:-3-->  <td ng-hide="hidesalary">{{ep.Salary }}</td>
+    <!--step:-3-->  <td ng-show="hidesalary">####</td>
+                    <td>{{ep.city }}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
